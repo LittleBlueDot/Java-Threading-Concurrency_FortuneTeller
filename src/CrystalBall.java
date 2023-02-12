@@ -16,20 +16,20 @@ public class CrystalBall implements Runnable{
     }
 
     public void ask(Question question) {
-        System.out.println("Good question! You asked: " + question.getQuestion());
-        this.think(question);
-        System.out.println("Answer: " + this.answer());
+        System.out.println("You asked: " + question.getQuestion() + "\n Answer: " + this.answer());
+//        this.think(question);
+//        System.out.println("Answer: " + this.answer());
     }
 
-    private void think(Question question) {
-        System.out.println("Hmm... Thinking");
-        try {
-            Thread.sleep(this.getSleepTimeInMs(question.getDifficulty()));
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        System.out.println("Done!");
-    }
+//    private void think(Question question) {
+//        System.out.println("Hmm... Thinking");
+//        try {
+//            Thread.sleep(this.getSleepTimeInMs(question.getDifficulty()));
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//        System.out.println("Done!");
+//    }
     private String answer() {
         String[] answers = {
                 "Signs point to yes!",
